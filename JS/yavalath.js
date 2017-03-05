@@ -30,8 +30,6 @@
 
 
 
-
-
 $(document).ready(function(){
 
         var i = 0;
@@ -55,7 +53,7 @@ $(document).ready(function(){
 		 //   alert(ElementId);
 		  	$(ElementId).css({"margin-top" : MarginTop + "px"});
 		 // alert($(this.id).css("margin-top"));
-		 	$(ElementId).css({"margin-left" : MarginLeft + "px" });       //fix the position 
+		 	$(ElementId).css({"margin-left" : MarginLeft + "px" });       //fix the position by change the id's poperty
 	 	 	$(this).addClass("piecesHover");		
 		});
 		   $(this).off(event);
@@ -73,26 +71,74 @@ $(document).ready(function(){
 
 		}
 
-			var Cout = 0;
-			$("span").on("click",function(){
+
+			var CoutTwo = 0;
+
+			$("#TwoPlayer").click(function(){
+
+
+
+			$("span").one("click",function(){
 
 				
 
-				if(Cout == 0)
+				if(CoutTwo == 0)
 				{
 				
-				$(this).addClass("pieces").css("background-color","white");
-			      Cout = 1; 
+				$(this).append("<span class='piecesWhite'></span");
+				  // use appent to fix the position
+			      CoutTwo = 1; 
 			    }
 
-			    else if(Cout == 1)
+			    else if(CoutTwo == 1)
 			    {
 				
-				$(this).addClass("pieces").css("background-color","black");
-			      Cout = 0; 
+				$(this).append("<span class='piecesBlack'></span");
+			      CoutTwo = 0; 
 			    }
 
 			})
+
+			});
+
+
+			$("#ThreePlayer").click(function(){
+
+				$("span").one("click",function(){
+
+				if(CoutTwo == 0)
+				{
+				
+				$(this).append("<span class='piecesWhite'></span");
+				  // use appent to fix the position
+			      CoutTwo = 1; 
+			    }
+
+			    else if(CoutTwo == 1)
+			    {
+				
+				$(this).append("<span class='piecesBlack'></span");
+			      CoutTwo = 2; 
+			    }
+
+			    else if (CoutTwo == 2)
+			    {
+				
+				$(this).append("<span class='piecesGrey'></span");
+			      CoutTwo = 0; 
+
+			    }
+
+			});
+
+			});
+
+
+			$("#reset").click(function(){
+
+				location.reload();
+
+			});
 
 
    });
