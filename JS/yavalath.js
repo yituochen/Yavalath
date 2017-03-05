@@ -32,50 +32,62 @@
 
 $(document).ready(function(){
 
-        var i = 0;
+  //       var i = 0;
 		
-		if(i == 0)
-		{
+		// if(i == 0)
+		// {
 		
-			$("span").on("hover",function(){
+		// 	$("span").on("hover",function(){
 
-	 		var MarginTop = parseInt($(this).css("margin-top"),10);
-	 		var MarginLeft = parseInt($(this).css("margin-left"),10);
-	 		var ElementId = "#" + $(this).attr("id");
+	 // 		// var MarginTop = parseInt($(this).css("margin-top"),10);
+	 // 		// var MarginLeft = parseInt($(this).css("margin-left"),10);
+	 // 		// var ElementId = "#" + $(this).attr("id");
 
 	 	 
-		 //$("piecesHover").addClass({"background-color": "yellow"});
-			 MarginTop = MarginTop- 5;
-		 	 MarginLeft = MarginLeft + 5;
+		//  //$("piecesHover").addClass({"background-color": "yellow"});  //change the id margin to change postion 
+		// 	 // MarginTop = MarginTop- 5;
+		//  	//  MarginLeft = MarginLeft + 5;
 
-		 //   alert(MarginTop);
-		 //   alert(MarginLeft);
-		 //   alert(ElementId);
-		  	$(ElementId).css({"margin-top" : MarginTop + "px"});
-		 // alert($(this.id).css("margin-top"));
-		 	$(ElementId).css({"margin-left" : MarginLeft + "px" });       //fix the position by change the id's poperty
-	 	 	$(this).addClass("piecesHover");		
-		});
-		   $(this).off(event);
-		   i ++;
-		  // alert(i);
-		}
+		//  //   alert(MarginTop);
+		//  //   alert(MarginLeft);
+		//  //   alert(ElementId);
+		//  //  	$(ElementId).css({"margin-top" : MarginTop + "px"});
+		//  // // alert($(this.id).css("margin-top"));
+		//  // 	$(ElementId).css({"margin-left" : MarginLeft + "px" });       //fix the position by change the id's poperty
+	 // 	 	$(this).addClass("piecesHover");		
+		// });
+		//    $(this).off(event);
+		//    i ++;
+		//   // alert(i);
+		// }
 
-		else
-		{
-			$("span").hover(function(){
+		// else
+		// {
+		// 	$("span").hover(function(){
 
-			$(this).addClass("piecesHover");	
+		// 	$(this).addClass("piecesHover");	
 
-			});
+		// 	});
 
-		}
+		// }
+
+
+			
+
 
 
 			var CoutTwo = 0;
 
-			$("#TwoPlayer").click(function(){
 
+		 	$("span").hover(function(){
+
+		 	$(this).addClass("piecesHover");	
+
+		 	});
+
+
+
+			$("#TwoPlayer").click(function(){
 
 
 			$("span").one("click",function(){
