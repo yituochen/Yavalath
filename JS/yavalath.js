@@ -86,7 +86,8 @@ $(document).ready(function(){
 		 	});
 
 
-
+//this is for two player game
+	
 			$("#TwoPlayer").click(function(){
 
 
@@ -113,7 +114,7 @@ $(document).ready(function(){
 
 			});
 
-
+// this is for three player game which  doesnt matter
 			$("#ThreePlayer").click(function(){
 
 				$("span").one("click",function(){
@@ -145,7 +146,7 @@ $(document).ready(function(){
 
 			});
 
-
+// refresh the page 
 			$("#reset").click(function(){
 
 				location.reload();
